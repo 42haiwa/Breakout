@@ -25,14 +25,12 @@ int main(void) {
 				default:
 					break;
 			}
-
-			window.clear();
-
-			player.render(window);
-			player.update();
-
-			window.display();
 		}
+		
+		window.clear();
+		player.update();
+		player.render(window);
+		window.display();
 	}
 
 	return 0;

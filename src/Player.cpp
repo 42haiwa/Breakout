@@ -4,7 +4,7 @@ Player::Player(sf::Vector2f const & position) : BreakoutEntity(position) {
     m_rectangle = sf::RectangleShape{sf::Vector2f{playerWidth, playerHeight}};
     m_rectangle.setFillColor(sf::Color{100, 250, 50});
 
-    m_position = sf::Vector2f{800 / 2, 580};
+    m_position = sf::Vector2f{800 / 2, 600 - playerHeight};
 
     m_rectangle.setPosition(m_position);
 }

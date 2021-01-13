@@ -10,8 +10,8 @@ class Player : public BreakoutEntity {
         sf::Clock m_clock;
 
         static constexpr float playerWidth{120.f};
-        static constexpr float playerHeight{50.f};
-        static constexpr float playerSpeedMove{200.f};
+        static constexpr float playerHeight{20.f};
+        static constexpr float playerSpeedMove{400.f};
     public:
         Player(sf::Vector2f const & position);
         void update() override;
