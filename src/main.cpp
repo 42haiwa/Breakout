@@ -1,11 +1,14 @@
 #include <SFML/Graphics.hpp>
+#include <vector>
 #include "Player.h"
+#include "Brick.h"
 
 int main(void) {
 	sf::RenderWindow window{sf::VideoMode(800, 600), "Breakout", sf::Style::Close};
 	auto player = Player{sf::Vector2f{100, 100}};
+	auto brick = Brick{sf::Vector2f{0, 0}};
 
-	// window.setVerticalSyncEnabled(true);
+	window.setVerticalSyncEnabled(true);
 
 	while (window.isOpen()) {
 		sf::Event event;
@@ -28,8 +31,12 @@ int main(void) {
 		}
 		
 		window.clear();
+
+		brick.update();
 		player.update();
+		brick.render(window);
 		player.render(window);
+
 		window.display();
 	}
 
