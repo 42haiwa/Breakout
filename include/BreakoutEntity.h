@@ -9,8 +9,8 @@ class BreakoutEntity {
     
     public:
         BreakoutEntity(sf::Vector2f const & position);
-        virtual void update();
-        virtual void render(sf::RenderWindow & renderWindow);
+        virtual void update() = 0;
+        virtual void render(sf::RenderWindow & renderWindow) = 0;
 };
 
 #endif
