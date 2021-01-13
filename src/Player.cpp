@@ -27,5 +27,8 @@ void Player::checkKeyboard(sf::Time dt) {
         m_position.x -= playerSpeedMove * dt.asSeconds();
     }
 
+    if (m_position.x < 0) m_position.x = 0;
+    if (m_position.x > 800 - playerWidth) m_position.x = 800 - playerWidth;
+
     m_rectangle.setPosition(m_position);
 }
