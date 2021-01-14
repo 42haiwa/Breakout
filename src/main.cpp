@@ -4,6 +4,11 @@
 #include "Brick.h"
 #include "Ball.h"
 
+/*
+ *		TASK:
+ *			-Make better Ball bounce 
+ */
+
 int main(void) {
 	sf::RenderWindow window{sf::VideoMode(800, 600), "Breakout", sf::Style::Close};
 	auto player = Player{sf::Vector2f{100, 100}};
