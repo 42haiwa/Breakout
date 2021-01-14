@@ -18,6 +18,7 @@ class Brick : public BreakoutEntity {
         Brick(sf::Vector2f const & position);
         void update() override;
         void render(sf::RenderWindow & renderWindow) override;
+        void setPosition(sf::Vector2f const & position);
 };
 
 #endif
