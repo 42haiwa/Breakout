@@ -2,10 +2,12 @@
 #include <vector>
 #include "Player.h"
 #include "Brick.h"
+#include "Ball.h"
 
 int main(void) {
 	sf::RenderWindow window{sf::VideoMode(800, 600), "Breakout", sf::Style::Close};
 	auto player = Player{sf::Vector2f{100, 100}};
+	auto ball = Ball{sf::Vector2f{400, 300}};
 
 	std::vector<Brick> bricks;
 
@@ -42,6 +44,9 @@ int main(void) {
 			brick.update();
 			brick.render(window);
 		}
+
+		ball.update();
+		ball.render(window);
 
 		player.update();
 		player.render(window);
