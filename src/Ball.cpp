@@ -17,13 +17,13 @@ void Ball::render(sf::RenderWindow & renderWindow) {
 }
 
 void Ball::move(sf::Time dt) {
-    m_position.x += m_ballSpeedMove * dt.asSeconds() * cos((48) / 180.f * M_PI);
-    m_position.y += m_ballSpeedMove * dt.asSeconds() * sin((48) / 180.f * M_PI);
+    m_position.x += m_ballSpeedMoveX * dt.asSeconds() * cos((48) / 180.f * M_PI);
+    m_position.y += m_ballSpeedMoveY * dt.asSeconds() * sin((48) / 180.f * M_PI);
 
-    if (m_position.x < 0) m_ballSpeedMove *= -1;
-    if (m_position.x > 800) m_ballSpeedMove *= -1;
-    if (m_position.y < 0) m_ballSpeedMove *= -1;
-    if (m_position.y > 600) m_ballSpeedMove *= -1;
+    if (m_position.x < 0) m_ballSpeedMoveX *= -1;
+    if (m_position.x > 800) m_ballSpeedMoveX *= -1;
+    if (m_position.y < 0) m_ballSpeedMoveY *= -1;
+    if (m_position.y > 600) m_ballSpeedMoveY *= -1;
 
     m_rectangle.setPosition(m_position);
 }
