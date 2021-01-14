@@ -1,19 +1,16 @@
 #include <SFML/Graphics.hpp>
 #include <vector>
-#include <iostream>
 #include "Player.h"
 #include "Brick.h"
 
 int main(void) {
 	sf::RenderWindow window{sf::VideoMode(800, 600), "Breakout", sf::Style::Close};
 	auto player = Player{sf::Vector2f{100, 100}};
-	//auto brick = Brick{sf::Vector2f{0, 0}};
 
 	std::vector<Brick> bricks;
 
 	for (auto i{0}; i < 8; i++) {
 		auto brick = Brick{sf::Vector2f{(800.f / 8) * i, 0}};
-		std::cout << (800.f / 8) * i << std::endl;
 		bricks.push_back(brick);
 	}
 
@@ -46,9 +43,7 @@ int main(void) {
 			brick.render(window);
 		}
 
-		// brick.update();
 		player.update();
-		// brick.render(window);
 		player.render(window);
 
 		window.display();
